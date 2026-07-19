@@ -81,9 +81,27 @@ public class MainClass {
 		a.checkBal();
 
 		System.err.println("----------------------------");
-		Shopping shop = new Shopping(500, 5);
+		Shopping shop = new Shopping(5500, 5);
 		shop.calBill();
-		
+
+		System.err.println("----------------------------");
+		ElectricityBill eb = new ElectricityBill(20);
+		eb.bill();
+
+		System.err.println("----------------------------");
+		FibonacciSeries fs = new FibonacciSeries(1, 0);
+		fs.fSeries();
+
+		System.err.println("----------------------------");
+		PrimeNo prime = new PrimeNo(11);
+		prime.checkPrime();
+
+		System.err.println("----------------------------");
+		Library l = new Library("java", true);
+		l.issueBook();
+		l.returnBook();
+		l.issueBook();
+		l.returnBook();
 
 	}
 
