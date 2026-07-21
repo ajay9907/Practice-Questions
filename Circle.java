@@ -1,28 +1,26 @@
-package com.constructor_practice;
+package com.onlypractice;
 
+//Circle
 //Create a Circle class with:
 //
-//radius
-//Constructor to initialize radius
-//calculateArea() method
-//display() method
+//Private variable: radius
+//Setter and Getter
+//Method:
+//calculateArea()
 
 public class Circle {
+	private double rad;
 
-	double rad;
-
-	public Circle(double rad) {
+	public void setRad(double rad) {
 		this.rad = rad;
 	}
 
-	public void calArea() {
-		double area = Math.PI * rad * rad;
-		System.out.println("Area Of Circle:" + area);
+	public double getRad() {
+		return rad;
 	}
 
-	public void display() {
-		System.out.println(" Radius Of Circle : " + rad);
-
+	public double getCalArea() {
+		return Math.PI * rad * rad;
 	}
 
 }
