@@ -1,35 +1,40 @@
-package com.encapsulation;
+package com.onlypractice;
+
+//Create class BankAccount:
+//
+//Private variables: balance
+//Methods:
+//deposit(amount)
+//withdraw(amount) (check balance)
+//getBalance()
+//Perform operations in main()
 
 public class Bank {
+	private double balance;
 
-    private double bal;
+	public void setdeposite(int amount) {
+		if (amount > 0) {
+			balance += amount;
+			System.out.println(" Succesfully deposited amount: " + balance);
+		} else {
+			System.out.println("Deposited amount is fail: " + balance);
+		}
 
-    //Using Method For Set Balance because of Initializing of objects
-    
-    public void setBalance(double bal) {
-        this.bal = bal;
-    }
+	}
 
-    
-    public void setDeposit(double amount) {
-        if (amount > 0) {
-            bal += amount;
-        } else {
-            System.out.println("Invalid Deposit Amount.");
-        }
-    }
+	public void setWithdraw(int amount) {
+		
+		if (amount <balance) {
+			balance -= amount;
+			System.out.println("Sufficient Bal ");
+		} else {
+			System.out.println("Insufficient Bal.");
+		}
 
-    
-    public void setWithdraw(double amount) {
-        if (amount > 0 && amount <= bal) {
-            bal -= amount;
-        } else {
-            System.out.println("Insufficient Balance.");
-        }
-    }
+	}
 
-    
-    public double getBalance() {
-        return bal;
-    }
+	public double getBalance() {
+		return balance;
+	}
+
 }

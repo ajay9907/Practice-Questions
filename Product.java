@@ -1,50 +1,35 @@
-package com.constructor_practice;
+package com.onlypractice;
 
-//Create a Product class with the following requirements:
+import java.util.Scanner;
+
+//Take input://Using scanner class.
 //
-//Instance Variables
-//productId
-//productName
-//price
-//Constructor
-//Initialize all values using a parameterized constructor.
-//Methods
-//display()
-//Print all product details.
-//applyDiscount(int percent)
-//Reduce the price by the given percentage.
-//Example:
-//Price = 1000
-//Discount = 20%
-//New Price = 800
+//Product name, quantity, price
+//Calculate total bill
+//If bill > 5000 → apply 10% discount
+//Print final amount
 
 public class Product {
-	int productId;
-	String productName;
+
+	String name;
+	int quantity;
 	double price;
 
-	public Product(int productId, String productName, double price) {
-		// if we want to initialize value of instance variable then using this keyword.
-		this.productId = productId;
-		this.productName = productName;
-		this.price = price;
-	}
+	public void calTotalBill() {
+		double totBill;
+		totBill = quantity * price;
+		double dis = 0;
 
-	public void display() {
-		System.out.println("Product Id: " + productId);
-		System.out.println("ProductName: " + productName);
-		System.out.println("Product Price: " + price);
-		System.out.println();
+		if (totBill >= 5000) {
+			dis = totBill * 0.10;
+			System.out.println("Youre Appling discount of 10 % " + dis);
 
-	}
+		}
+		double finalBill = totBill - dis;
 
-	public void applyDiscount(int percent) {
-		double discount = (price * percent) / 100;
-		price = price - discount;
-		System.out.println("Discount applied %: " + percent);
-		System.out.println("Discount amount: " + discount);
-		System.out.println("Discount price: " + price);
-		System.out.println();
+		System.out.println("Name Of Product : " + name);
+		System.out.println("Quantity  Of Product : " + quantity);
+		System.out.println("Price of Product : " + price);
 
 	}
 
